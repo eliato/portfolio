@@ -7,21 +7,19 @@ import { PortfolioComponent } from "./pages/portfolio/portfolio.component";
 import { ResumeComponent } from "./pages/resume/resume.component";
 import { ServicesComponent } from "./pages/services/services.component";
 
-const app_routes: Routes = [
-    { path: '', component: HomeComponent},
+const app_routes: Routes = [    
     { path: 'home', component: HomeComponent},
     { path: 'about', component: AboutComponent},
     { path: 'resume', component: ResumeComponent},
     { path: 'services', component: ServicesComponent},
     { path: 'portfolio', component: PortfolioComponent},
-    { path: 'contact', component: ContactComponent},
-
-    { path: '**', pathMatch: 'full', redirectTo: ''}
+    { path: 'contact', component: ContactComponent},    
+    { path: '**', pathMatch: 'full', redirectTo: 'home'}
 ]
 
 @NgModule({
     imports: [
-        RouterModule.forRoot( app_routes )
+        RouterModule.forRoot( app_routes, {useHash: true} )
     ],
     exports: [
         RouterModule
