@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ResumeComponent } from './pages/resume/resume.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PortfolioComponent } from './pages/portfolio/portfolio.component';
     AboutComponent,
     ResumeComponent,
     ServicesComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
