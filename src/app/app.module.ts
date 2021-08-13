@@ -8,6 +8,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ResumeComponent } from './pages/resume/resume.component';
 import { ServicesComponent } from './pages/services/services.component';
+import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ServicesComponent } from './pages/services/services.component';
     HomeComponent,
     AboutComponent,
     ResumeComponent,
-    ServicesComponent
+    ServicesComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
