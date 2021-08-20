@@ -45,7 +45,7 @@
                                     </div>
 
                                     <!--btn-toggle-->
-                                    <div class="btn-toggler ml-auto" id="btnToggle">
+                                    <div class="btn-toggler ml-auto" id="btnToggle" (click)="toggleCollapse()">
                                         <span></span>
                                     </div>
                                 </div>
@@ -57,7 +57,7 @@
                 <!--info-tab-->
                 <div class="info-tab">
                     <!--navigation-->
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <ul class="nav nav-tabs" [class.show]="show" id="myTab" role="tablist">
                         <li class="nav-item" >
                             <a class="nav-link " id="home-tab" data-toggle="tab" routerLink="home" routerLinkActive="active" role="tab" aria-controls="home" aria-selected="true">
                                 <span> <i class="fas fa-home"></i></span>

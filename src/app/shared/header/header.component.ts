@@ -7,10 +7,14 @@ import { InfoPaginaService } from 'src/app/services/info-pagina.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  show:boolean = false;
   constructor( public infoPaginaService: InfoPaginaService ) { }
 
   ngOnInit(): void {
+  }
+
+  toggleCollapse() {
+    this.show = !this.show
   }
 
 }
