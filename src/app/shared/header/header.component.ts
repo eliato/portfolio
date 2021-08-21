@@ -17,4 +17,11 @@ export class HeaderComponent implements OnInit {
     this.show = !this.show
   }
 
+  //funcion para que el scroll sea hasta el top
+  onDeactivate() {
+    document.body.scrollTop = 0;
+    // Alternatively, you can scroll to top by using this other call:
+    // window.scrollTo(0, 0)
+  }
+
 }
