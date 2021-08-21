@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  toggleCollapse() {
+ toggleCollapse() {
     this.show = !this.show
   }
 
