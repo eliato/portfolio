@@ -59,40 +59,40 @@
                     <!--navigation-->
                     <ul class="nav nav-tabs" [class.show]="show" id="myTab" role="tablist">
                         <li class="nav-item" >
-                            <a class="nav-link " id="home-tab" data-toggle="tab" routerLink="home" routerLinkActive="active" role="tab" aria-controls="home" aria-selected="true">
+                            <a class="nav-link " (click)="toggleCollapse()" id="home-tab" data-toggle="tab" routerLink="home" routerLinkActive="active" role="tab" aria-controls="home" aria-selected="true">
                                 <span> <i class="fas fa-home"></i></span>
                                 <span>Home</span>
                             </a>
                         </li>
-                        <li class="nav-item" routerLinkActive="active">
-                            <a class="nav-link" id="about-tab" data-toggle="tab" routerLink="about" routerLinkActive="active" role="tab" aria-controls="about" aria-selected="false">
+                        <li class="nav-item" >
+                            <a class="nav-link" (click)="toggleCollapse()" id="about-tab" data-toggle="tab" routerLink="about" routerLinkActive="active" role="tab" aria-controls="about" aria-selected="false">
                                 <span><i class="fas fa-user-tie"></i></span>
                                 <span> About</span>
                             </a>
                         </li>
 
-                        <li class="nav-item" routerLinkActive="active">
-                            <a class="nav-link" id="resume-tab" data-toggle="tab" routerLink="resume" routerLinkActive="active" role="tab" aria-controls="resume" aria-selected="false">
+                        <li class="nav-item" >
+                            <a class="nav-link" (click)="toggleCollapse()" id="resume-tab" data-toggle="tab" routerLink="resume" routerLinkActive="active" role="tab" aria-controls="resume" aria-selected="false">
                                 <span><i class="fas fa-graduation-cap"></i></span>
                                 <span>Resume</span>
                             </a>
                         </li>
                        
-                        <li class="nav-item" routerLinkActive="active">
-                            <a class="nav-link" id="services-tab" data-toggle="tab" routerLink="services" routerLinkActive="active" role="tab" aria-controls="services" aria-selected="false">
+                        <li class="nav-item" >
+                            <a class="nav-link" (click)="toggleCollapse()" id="services-tab" data-toggle="tab" routerLink="services" routerLinkActive="active" role="tab" aria-controls="services" aria-selected="false">
                                 <span><i class="fas fa-cogs"></i></span>
                                 <span> services</span>
                             </a>
                         </li>
-                        <li class="nav-item" routerLinkActive="active">
-                            <a class="nav-link" id="portfolio-tab" data-toggle="tab" routerLink="portfolio" routerLinkActive="active" role="tab" aria-controls="portfolio" aria-selected="false">
+                        <li class="nav-item" >
+                            <a class="nav-link" (click)="toggleCollapse()" id="portfolio-tab" data-toggle="tab" routerLink="portfolio" routerLinkActive="active" role="tab" aria-controls="portfolio" aria-selected="false">
                                 <span><i class="fas fa-briefcase"></i></span>
                                 <span> Portfolio</span>
                             </a>
                         </li>
                      
-                        <li class="nav-item" routerLinkActive="active">
-                            <a class="nav-link" id="contact-tab" data-toggle="tab" routerLink="contact" routerLinkActive="active" role="tab" aria-controls="contact" aria-selected="false">
+                        <li class="nav-item" >
+                            <a class="nav-link" (click)="toggleCollapse()" id="contact-tab" data-toggle="tab" routerLink="contact" routerLinkActive="active" role="tab" aria-controls="contact" aria-selected="false">
                                 <span><i class="fas fa-envelope"></i></span>
                                 <span> Contact</span>
                             </a>
