@@ -101,6 +101,9 @@ a:hover, a:focus {
 .base-color {
   color: #00a3e1;
 }
+.color-success {
+  color: #f10b58;
+}
 
 .bg-base-color {
   background-color: #00a3e1;
