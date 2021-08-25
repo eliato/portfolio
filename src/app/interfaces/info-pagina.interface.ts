@@ -7,5 +7,6 @@ export interface InfoPagina {
     facebook?: string;
     twitter?: string;
     titulo?: string;
+    mensaje?: boolean;
   }
 
