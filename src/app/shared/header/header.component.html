@@ -24,10 +24,10 @@
                             <div class="col-12">
                                 <div class="profile d-flex align-items-center">
                                     <div class="d-flex align-items-center">
-                                        <a href="index.html"><img src="assets/img/yo.jpg" alt=""></a>
-                                        <a class="desc" href="index.html">
-                                            <h3 class="text-white mb-0">{{infoPaginaService.info.nombre}}</h3>
-                                            <h6 class="text-white mb-0">{{infoPaginaService.info.titulo}}</h6>
+                                        <a routerLink="home"><img src="assets/img/new.png" alt=""></a>
+                                        <a class="desc" routerLink="home">
+                                            <h3 class="text-black-50 mb-0">{{infoPaginaService.info.nombre}}</h3>
+                                            <h6 class="text-black-50  mb-0">{{infoPaginaService.info.titulo}}</h6>
                                         </a>
                                     </div>
 
@@ -37,10 +37,7 @@
                                         <ul class="list-inline">
                                             <li><a [href]="infoPaginaService.info.facebook" class="text-white"><i class="fab fa-facebook-f"></i></a></li>
                                             <li><a [href]="infoPaginaService.info.twitter" target="_blank" class="text-white"><i class="fab fa-twitter"></i></a></li>
-                                           <!-- <li><a href="#" class="text-white"><i class="fab fa-instagram"></i></a></li>
-                                            <li><a href="#" class="text-white"><i class="fab fa-dribbble"></i></a></li>
-                                            <li><a href="#" class="text-white"><i class="fab fa-behance"></i></a>
-                                            </li>-->
+                                          
                                         </ul>
                                     </div>
 
@@ -76,14 +73,8 @@
                                 <span><i class="fas fa-graduation-cap"></i></span>
                                 <span>Resume</span>
                             </a>
-                        </li>
+                        </li>                       
                        
-                        <!--<li class="nav-item" >
-                            <a class="nav-link" (click)="toggleCollapse()" id="services-tab" data-toggle="tab" routerLink="services" routerLinkActive="active" role="tab" aria-controls="services" aria-selected="false">
-                                <span><i class="fas fa-cogs"></i></span>
-                                <span> services</span>
-                            </a>
-                        </li>-->
                         <li class="nav-item" >
                             <a class="nav-link" (click)="toggleCollapse()" id="portfolio-tab" data-toggle="tab" routerLink="portfolio" routerLinkActive="active" role="tab" aria-controls="portfolio" aria-selected="false">
                                 <span><i class="fas fa-briefcase"></i></span>

@@ -101,6 +101,9 @@ a:hover, a:focus {
 .base-color {
   color: #00a3e1;
 }
+.color-success {
+  color: #f10b58;
+}
 
 .bg-base-color {
   background-color: #00a3e1;
@@ -1250,6 +1253,7 @@ ul {
 /* ------------------------------
 		Resume 
 ------------------------------ */
+
 .resume .timeline .item {
   position: relative;
   border-bottom: 1px solid #ffffff;
