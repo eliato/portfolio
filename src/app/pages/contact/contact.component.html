@@ -74,7 +74,8 @@
                     </div>
                     <div class="alert alert-success" role="alert" *ngIf="mensaje">
                         Thank you!, Your Message was sent successfully
-                      </div>
+                    </div>
+                    <div class="alert alert-danger" role="alert" *ngIf="alert">{{mensaje_alerta}}</div>
 
                     <button type="button" (click)="sendEmail()" class="btn-custom">
                         <span>

@@ -14,7 +14,10 @@ export class ContactComponent implements OnInit {
   
   info: InfoPagina = {};
   endpoint : string;
- mensaje = false;
+  mensaje = false;
+  alert = false;
+  mensaje_alerta:string;
+
   constructor(private http: HttpClient ) { 
     this.http = http;
   }
@@ -30,29 +33,40 @@ export class ContactComponent implements OnInit {
  }
 
   sendEmail(){
-    let postVars = {
-      email   : this.emailInput.nativeElement.value,
-      name    :  this.nameInput.nativeElement.value,
-      message : this.messageInput.nativeElement.value,
-      subject : this.subjectInput.nativeElement
-    };
 
-    //You may also want to check the response. But again, let's keep it simple.
-    this.http.post(this.endpoint, postVars)
-        .subscribe(
-            (response : InfoPagina)=> {
-              console.log(response.mensaje)
-              if (response.mensaje) {
-                this.mensaje = true;
-                this.emailInput.nativeElement.value = '';
-                this.nameInput.nativeElement.value= '';
-                this.subjectInput.nativeElement.value= '';
-                this.messageInput.nativeElement.value= '';
-              }
-            } 
-            
+    if (this.nameInput.nativeElement.value == '') {
+      this.alert = true;
+      this.mensaje_alerta = 'Name is Required'
+    }else if(this.emailInput.nativeElement.value == ''){
+      this.alert = true;
+      this.mensaje_alerta = 'Email is Required'
+    }else if(this.messageInput.nativeElement.value == ''){
+      this.alert = true;
+      this.mensaje_alerta = 'Message is Required'
+    }else{
+            let postVars = {
+              email   : this.emailInput.nativeElement.value,
+              name    : this.nameInput.nativeElement.value,
+              message : this.messageInput.nativeElement.value,
+              subject : this.subjectInput.nativeElement
+            };
 
-        )
+            //You may also want to check the response. But again, let's keep it simple.
+            this.http.post(this.endpoint, postVars)
+                .subscribe(
+                    (response : InfoPagina)=> {
+                      console.log(response.mensaje)
+                      if (response.mensaje) {
+                        this.mensaje = true;
+                        this.emailInput.nativeElement.value = '';
+                        this.nameInput.nativeElement.value= '';
+                        this.subjectInput.nativeElement.value= '';
+                        this.messageInput.nativeElement.value= '';
+                      }
+                    }           
+
+            )
+          }
   }
 
 }
